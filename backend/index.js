@@ -15,7 +15,7 @@ const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
 const port = process.env.PORT||4000;
 
-app.use(cors({credentials:true,origin:'http://localhost:5173'}));
+app.use(cors({credentials:true,origin:'https://mern-blog-app-frontend-1bee.onrender.com'}));
 
 
 app.use(express.json());

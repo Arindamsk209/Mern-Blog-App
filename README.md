@@ -1,4 +1,8 @@
 # Mern-Blog-App
+<<<<<<< HEAD
+=======
+Structure of the Blog Web App
+>>>>>>> dfe3cb9ae93ca202ab8543a065180882ba242885
 App
 ├── Layout
 |   |

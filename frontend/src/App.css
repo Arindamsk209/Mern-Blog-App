@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    background-color: #f3e5e7;
+    
     
     
 }
@@ -14,7 +14,8 @@ a{
     cursor: pointer;
 }
 body{
-    color: #222;
+    background-color: #5a5757;
+    color: #D6D6D6;
 }
 img{
     max-width: 100%;
@@ -42,13 +43,13 @@ header a{
     display:inline-block;
     height: 40px;
     width: 150px;
-    background-color:   #4cb69f;
+    background-color:   #3f2a26;
 }
 header a.logo{
     font-weight: bold;
     font-size: 1.5rem;
     padding-bottom: 40px;
-    background-color: #f3e5e7;
+    background-color: #5a5757;;
     
 }
 header nav{
@@ -79,14 +80,14 @@ div.post div.texts a{
 }
 div.post p.info{
     margin:24px 0;
-    color: #888;
+    color: #2f1f1f;
     font-size:1rem;
     font-weight: bold;
     display: flex;
     gap: 10px;
 }
 div.post p.info a.author{
-    color:#333;
+    color:#ffffff;
 }
 div.post p.summary{
     margin:10px 0;

@@ -13,6 +13,7 @@ const fs = require('fs');
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
+const port = process.env.PORT||4000;
 
 app.use(cors({credentials:true,origin:'http://localhost:5173'}));
 app.use(express.json());
@@ -20,7 +21,7 @@ app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
 mongoose.connect('mongodb+srv://arindamsingh209:arindam@cluster1.29d0mug.mongodb.net/?retryWrites=true&w=majority');
-
+//Register Page
 app.post('/register', async (req,res) => {
   const {username,password} = req.body;
   try{
@@ -34,7 +35,7 @@ app.post('/register', async (req,res) => {
     res.status(400).json(e);
   }
 });
-
+//Login Page
 app.post('/login', async (req,res) => {
   const {username,password} = req.body;
   const userDoc = await User.findOne({username});
@@ -52,7 +53,7 @@ app.post('/login', async (req,res) => {
     res.status(400).json('wrong credentials');
   }
 });
-
+//user information header jsx
 app.get('/profile', (req,res) => {
   const {token} = req.cookies;
   jwt.verify(token, secret, {}, (err,info) => {
@@ -64,7 +65,7 @@ app.get('/profile', (req,res) => {
 app.post('/logout', (req,res) => {
   res.cookie('token', '').json('ok');
 });
-
+//CreatePostPage
 app.post('/post', uploadMiddleware.single('file'), async (req,res) => {
   const {originalname,path} = req.file;
   const parts = originalname.split('.');
@@ -87,7 +88,7 @@ app.post('/post', uploadMiddleware.single('file'), async (req,res) => {
   });
 
 });
-
+//EditPost
 app.put('/post',uploadMiddleware.single('file'), async (req,res) => {
   let newPath = null;
   if (req.file) {
@@ -118,7 +119,7 @@ app.put('/post',uploadMiddleware.single('file'), async (req,res) => {
   });
 
 });
-
+// shown the post at home page
 app.get('/post', async (req,res) => {
   res.json(
     await Post.find()
@@ -127,14 +128,14 @@ app.get('/post', async (req,res) => {
       .limit(20)
   );
 });
-
+//postPage
 app.get('/post/:id', async (req, res) => {
   const {id} = req.params;
   const postDoc = await Post.findById(id).populate('author', ['username']);
   res.json(postDoc);
 })
 
-app.listen(4000, () => {
+app.listen(port, () => {
   console.log('Server is running on port 4000');
 });
 //

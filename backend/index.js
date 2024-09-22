@@ -15,7 +15,12 @@ const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
 const port = process.env.PORT||4000;
 
-app.use(cors({credentials:true,origin:'https://mern-blog-app-frontend-1bee.onrender.com'}));
+//app.use(cors({credentials:true,origin:'https://mern-blog-app-frontend-1bee.onrender.com'}));
+app.use(cors({
+  credentials: true,
+  origin: '*', // Temporarily allow all origins
+}));
+
 
 
 app.use(express.json());

@@ -8,8 +8,8 @@ export default function Post({_id,title,summary,cover,content,createdAt,author})
    <div className="post">
       <div className="image">
         <Link to={`/post/${_id}`}>
-         <img src={'https://mern-blog-app-backend-tgj1.onrender.com/'+cover} alt=""/>
-        </Link>
+  <img src={cover ? `https://mern-blog-app-backend-tgj1.onrender.com/${cover}` : '/placeholder.jpg'} alt="" />
+</Link>
       </div>
       <div className="texts">
         <Link to={`/post/${_id}`}>

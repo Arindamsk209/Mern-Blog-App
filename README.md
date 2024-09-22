@@ -1,49 +1,15 @@
 # Mern-Blog-App
-<<<<<<< HEAD
-=======
-Structure of the Blog Web App
->>>>>>> dfe3cb9ae93ca202ab8543a065180882ba242885
-App
-├── Layout
-|   |
-│   ├── IndexPage
-│   │   ├── FetchPosts (calls backend to get list of posts)
-│   │   └── PostList
-│   │       └── PostItem (displays individual posts with links to PostPage)
-|   |
-|   |
-│   ├── LoginPage
-│   │   └── Auth (handles user login, calls backend for authentication)
-|   |
-|   |
-│   ├── RegisterPage
-│   │   └── Auth (handles user registration, calls backend to create user)
-|   |
-|   |
-│   └── UserContextProvider
-│       ├── AuthState (manages current user authentication state)
-│       └── Provides user context to all child components
-├── CreatePost
-|   |
-│   ├── PostForm
-│   │   └── Submit (sends post data to backend to create a new post)
-│   └── Feedback (displays success/error messages)
-|
-|
-├── PostPage
-│   ├── FetchPost (calls backend to get post details)
-│   ├── PostDetail (displays details of a single post)
-│   
-|       
-├── EditPost
-|   |
-│   ├── FetchPost (calls backend to get existing post details for editing)
-|   |
-│   ├── EditForm
-│   │   └── Submit (sends updated post data to backend)
-│   └── Feedback (displays success/error messages)
-└── UserContextProvider
-    |
-    ├── AuthState (handles authentication and user state)
-    └── Provides user context to all child components
+1. Overview
 
+“This project is a blog platform where users can create, edit, and view blog posts. It includes user authentication, so people can log in, create their own posts, and manage them.”
+
+2. Key Features
+
+User Authentication: “Users can sign up, log in, and log out. After logging in, they can create, edit, and delete their posts.”
+Post Management: “Users can make new posts, including adding a title, summary, content, and images. They can also update or view their posts.”
+Homepage: “The homepage displays a list of all posts with summaries. Users can click on a post to read it in detail.”
+3. Technologies Used
+
+Frontend: “The front end is built with React. It includes components like Header, LoginPage, CreatePost, etc., and uses React Router for navigating between pages.”
+Backend: “The backend is built with Express.js. It handles requests for user login, registration, and post management.”
+Database: “We use MongoDB to store user and post information.”

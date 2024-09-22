@@ -1,0 +1,43 @@
+App
+├── Layout
+|   |
+│   ├── IndexPage
+│   │   ├── FetchPosts (calls backend to get list of posts)
+│   │   └── PostList
+│   │       └── PostItem (displays individual posts with links to PostPage)
+|   |
+|   |
+│   ├── LoginPage
+│   │   └── Auth (handles user login, calls backend for authentication)
+|   |
+|   |
+│   ├── RegisterPage
+│   │   └── Auth (handles user registration, calls backend to create user)
+|   |
+|   |
+│   └── UserContextProvider
+│       ├── AuthState (manages current user authentication state)
+│       └── Provides user context to all child components
+├── CreatePost
+|   |
+│   ├── PostForm
+│   │   └── Submit (sends post data to backend to create a new post)
+│   └── Feedback (displays success/error messages)
+|
+|
+├── PostPage
+│   ├── FetchPost (calls backend to get post details)
+│   ├── PostDetail (displays details of a single post)
+│   
+|       
+├── EditPost
+|   |
+│   ├── FetchPost (calls backend to get existing post details for editing)
+|   |
+│   ├── EditForm
+│   │   └── Submit (sends updated post data to backend)
+│   └── Feedback (displays success/error messages)
+└── UserContextProvider
+    |
+    ├── AuthState (handles authentication and user state)
+    └── Provides user context to all child components

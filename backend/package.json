@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "node index.js"
+    "build":"npm i"
     
   },
   "dependencies": {

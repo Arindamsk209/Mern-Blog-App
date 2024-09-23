@@ -11,7 +11,7 @@ export default function EditPost() {
   const [redirect,setRedirect] = useState(false);
 
   useEffect(() => {
-    fetch('https://mern-blog-app-backend-d36z.onrender.com/post/'+id)
+    fetch('http://localhost:5174/post/'+id)
       .then(response => {
         response.json().then(postInfo => {
           setTitle(postInfo.title);

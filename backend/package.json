@@ -1,6 +1,10 @@
 {
   "scripts": {
+<<<<<<< HEAD
     "start": "node index.js",
+=======
+    "start": "nodemon index.js",
+>>>>>>> d0a53a4 (updated)
     "build":"npm i"
     
   },

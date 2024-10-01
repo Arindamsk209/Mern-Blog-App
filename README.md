@@ -1,5 +1,11 @@
 # Mern-Blog-App
-# Website Link : https://fascinating-truffle-d8d0b4.netlify.app/
+# Verys simple to run on localdevice
+# How to run it on Device
+# Download this github file, then open the folder in vscode .
+# Add all the dependencies ,you can find the dependencies from package.json
+# Then open frontend file by entering cd frontend and then after enter npm run dev
+# after that open new terminal in same vs code then enter "cd backend" and node index,js
+# after these steps the project will successfully run.
 1. Overview
 
 “This project is a blog platform where users can create, edit, and view blog posts. It includes user authentication, so people can log in, create their own posts, and manage them.”

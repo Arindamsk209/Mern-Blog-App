@@ -1,4 +1,5 @@
-# Mern-Blog-App
+# Mern-Blog-App 
+# ReactJs ExpressJs NodeJs MongoDB
 # Website Link:https://fascinating-truffle-d8d0b4.netlify.app/
 
 “This project is a blog platform where users can create, edit, and view blog posts. It includes user authentication, so people can log in, create their own posts, and manage them.”
